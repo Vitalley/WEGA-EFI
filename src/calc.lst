@@ -1,0 +1,1063 @@
+MPASM  5.51                          CALC.ASM   7-11-2019  14:26:31         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00001 ;-----------------------------------------------------
+                      00002 ;
+                      00003 ;-----------------------------------------------------
+Error[150]  : Labels must be defined in a code or data section when making an object file
+0000                  00004 M_CALC  
+                      00005 ; Приращение индексного указателя на кольцевой буфер
+                      00006 ;       DECF    BUF_IND,F
+                      00007 ;       BTFSC   STATUS,C
+                      00008 ;       GOTO    $+3
+                      00009 ;       MOVLW   .3
+                      00010 ;       MOVWF   BUF_IND
+                      00011 
+                      00012 
+Error[113]  : Symbol not previously defined (STAT)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00013         BTFSC   STAT,0          ; Проверяем двигатель
+Error[151]  : Operand contains unresolvable labels or is too complex
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00014         GOTO    CALC            ; Двигатель включён и имеет обороты >400
+                      00015 ; Вычисление времени впрыска на пуске двигателя
+Error[113]  : Symbol not previously defined (TPS)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00016         MOVF    TPS,W           ; Записываем положение ДЗ       
+Error[113]  : Symbol not previously defined (FL_CLEAR)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00017         SUBLW   FL_CLEAR*.256/.5000     ; Порог включения режима продувки
+Error[113]  : Symbol not previously defined (STATUS)
+Error[113]  : Symbol not previously defined (C)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00018         BTFSC   STATUS,C                ; Если положение ДЗ меньше порога
+Error[150]  : Labels must be defined in a code or data section when making an object file
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00019         GOTO    $+4
+Error[113]  : Symbol not previously defined (T_INJ_H)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00020         CLRF    T_INJ_H         ; Минимальное время открытия форсунки
+Error[113]  : Symbol not previously defined (T_INJ_L)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00021         CLRF    T_INJ_L
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00022         RETURN
+                      00023 
+Error[113]  : Symbol not previously defined (Mul1Hi)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00024         CLRF    Mul1Hi
+Warning[207]: Found label after column 1. (movab)
+Error[122]  : Illegal opcode (COLT)
+0000                  00025         movab   COLT,MULc               ; Температура двигателя - множитель
+                      00026 ;       MOVF    CRANK_WARM_L,W
+                      00027 ;       SUBWF   CRANK_COLT_L,W  
+Error[113]  : Symbol not previously defined (CRANK_COLT)
+Error[113]  : Symbol not previously defined (CRANK_HOT)
+Error[152]  : Executable code and data must be defined in an appropriate section
+MPASM  5.51                          CALC.ASM   7-11-2019  14:26:31         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0000                  00028         MOVLW   low (CRANK_COLT-CRANK_HOT)
+Error[113]  : Symbol not previously defined (Mul1Lo)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00029         MOVWF   Mul1Lo          ; Разность врмён впрыска - множимое
+                      00030 
+                      00031 ;       BTFSC   STATUS,C
+                      00032 ;       BSF     FLG_C,6
+                      00033 
+                      00034 ;       MOVF    CRANK_WARM_H,W
+                      00035 ;       SUBWF   CRANK_COLT_H,W  
+Error[113]  : Symbol not previously defined (CRANK_COLT)
+Error[113]  : Symbol not previously defined (CRANK_HOT)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00036         MOVLW   high (CRANK_COLT-CRANK_HOT)
+Error[113]  : Symbol not previously defined (Mul1Hi)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00037         MOVWF   Mul1Hi          ; Разность врмён впрыска - множимое
+                      00038 
+                      00039 ;       BTFSC   FLG_C,6
+                      00040 ;       DECF    Mul1Hi,F
+                      00041 
+Error[113]  : Symbol not previously defined (MUL16_8)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00042         CALL    MUL16_8         ; Умножение 16х8
+Error[113]  : Symbol not previously defined (Mul1Hi)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00043         MOVF    Mul1Hi,W
+Error[113]  : Symbol not previously defined (CRANK_HOT)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00044         ADDLW   low CRANK_HOT
+Error[113]  : Symbol not previously defined (T_INJ_L)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00045         MOVWF   T_INJ_L
+Error[113]  : Symbol not previously defined (STATUS)
+Error[113]  : Symbol not previously defined (C)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00046         BTFSC   STATUS,C                ; проверяем CARRY
+Error[113]  : Symbol not previously defined (ResHi)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00047         INCF    ResHi,F
+Error[113]  : Symbol not previously defined (ResHi)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00048         MOVF    ResHi,W
+Error[113]  : Symbol not previously defined (CRANK_HOT)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00049         ADDLW   high CRANK_HOT
+Error[113]  : Symbol not previously defined (T_INJ_H)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00050         MOVWF   T_INJ_H
+                      00051 
+                      00052 ;       BSF     STAT,7
+Error[113]  : Symbol not previously defined (D_TPS)
+Error[152]  : Executable code and data must be defined in an appropriate section
+MPASM  5.51                          CALC.ASM   7-11-2019  14:26:31         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0000                  00053         CLRF    D_TPS
+                      00054 
+                      00055         ;CALL   STPUP           ; по шагу открываем дроссель
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00056         RETURN
+                      00057 
+                      00058 ;-----------------------------------------------------
+                      00059 ; Основной расчёт времени впрыска
+                      00060 ; TI = RCO + ((MAP-Offset)(RqF - RCO) / 256) 
+                      00061 ;-----------------------------------------------------
+Error[150]  : Labels must be defined in a code or data section when making an object file
+Error[113]  : Symbol not previously defined (Mul1Hi)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00062 CALC    CLRF    Mul1Hi
+                      00063 ; Вычисляем уровень обогащения при прогреве
+                      00064 ; ENR_12 = -12   B8h
+                      00065 ; ENR_COLT +20   40h
+                      00066 ; ENR_MID  +50   09h
+                      00067 ; ENR_HOT  +80   0h
+                      00068  ;let COLT,079H
+Error[113]  : Symbol not previously defined (COLT)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00069         BTFSS   COLT,7
+Error[151]  : Operand contains unresolvable labels or is too complex
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00070         GOTO    COLT_MID
+Error[113]  : Symbol not previously defined (COLT)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00071         BTFSS   COLT,6
+Error[113]  : Symbol not previously defined (COLT_MID2)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00072         GOTO    COLT_MID2
+                      00073 ; -12 to -43
+Warning[207]: Found label after column 1. (movab)
+Error[122]  : Illegal opcode (COLT)
+                      00074         movab   COLT,MULc
+Error[113]  : Symbol not previously defined (MULc)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00075         BCF     MULc,7
+Error[113]  : Symbol not previously defined (MULc)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00076         BCF     MULc,6
+Error[113]  : Symbol not previously defined (ENR_12)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00077         MOVF    ENR_12,W
+Error[113]  : Symbol not previously defined (WARM_40)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00078         SUBWF   WARM_40,W
+Error[113]  : Symbol not previously defined (MULp)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00079         MOVWF   MULp
+Error[113]  : Symbol not previously defined (MUL8)
+Error[152]  : Executable code and data must be defined in an appropriate section
+MPASM  5.51                          CALC.ASM   7-11-2019  14:26:31         PAGE  4
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0000                  00080         CALL    MUL8
+Error[113]  : Symbol not previously defined (L_byte)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00081         RLF     L_byte,W
+Error[113]  : Symbol not previously defined (H_byte)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00082         RLF     H_byte,W
+Error[113]  : Symbol not previously defined (H_byte)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00083         RLF     H_byte,W
+Error[113]  : Symbol not previously defined (ENR_12)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00084         ADDWF   ENR_12,W
+Error[113]  : Symbol not previously defined (WARM_ENR)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00085         MOVWF   WARM_ENR
+Error[151]  : Operand contains unresolvable labels or is too complex
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00086         GOTO    GO_MAP
+                      00087 
+                      00088 ; +20 to -12
+Error[122]  : Illegal opcode (movab)
+                      00089 COLT_MID2       movab   COLT,MULc
+Error[113]  : Symbol not previously defined (MULc)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00090         BCF     MULc,7
+Error[113]  : Symbol not previously defined (MULc)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00091         BCF     MULc,6
+Error[113]  : Symbol not previously defined (WARM_20)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00092         MOVF    WARM_20,W
+Error[113]  : Symbol not previously defined (ENR_12)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00093         SUBWF   ENR_12,W
+Error[113]  : Symbol not previously defined (MULp)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00094         MOVWF   MULp
+Error[113]  : Symbol not previously defined (MUL8)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00095         CALL    MUL8    
+Error[113]  : Symbol not previously defined (L_byte)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00096         RLF     L_byte,F
+Error[113]  : Symbol not previously defined (H_byte)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00097         RLF     H_byte,F
+Error[113]  : Symbol not previously defined (L_byte)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00098         RLF     L_byte,F
+Error[113]  : Symbol not previously defined (H_byte)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00099         RLF     H_byte,W
+MPASM  5.51                          CALC.ASM   7-11-2019  14:26:31         PAGE  5
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Error[113]  : Symbol not previously defined (WARM_20)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00100         ADDWF   WARM_20,W
+Error[113]  : Symbol not previously defined (WARM_ENR)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00101         MOVWF   WARM_ENR
+Error[151]  : Operand contains unresolvable labels or is too complex
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00102         GOTO    GO_MAP
+                      00103 ; UP +20
+Error[150]  : Labels must be defined in a code or data section when making an object file
+Error[113]  : Symbol not previously defined (COLT)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00104 COLT_MID        BTFSS   COLT,6
+Error[113]  : Symbol not previously defined (COLT_MID3)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00105         GOTO    COLT_MID3
+                      00106 ; Up to +50
+Warning[207]: Found label after column 1. (movab)
+Error[122]  : Illegal opcode (COLT)
+                      00107         movab   COLT,MULc
+Error[113]  : Symbol not previously defined (MULc)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00108         BCF     MULc,7
+Error[113]  : Symbol not previously defined (MULc)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00109         BCF     MULc,6
+Error[113]  : Symbol not previously defined (WARM_50)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00110         MOVF    WARM_50,W
+Error[113]  : Symbol not previously defined (WARM_20)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00111         SUBWF   WARM_20,W
+Error[113]  : Symbol not previously defined (MULp)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00112         MOVWF   MULp
+Error[113]  : Symbol not previously defined (MUL8)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00113         CALL    MUL8
+Error[113]  : Symbol not previously defined (L_byte)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00114         RLF     L_byte,F
+Error[113]  : Symbol not previously defined (H_byte)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00115         RLF     H_byte,F
+Error[113]  : Symbol not previously defined (L_byte)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00116         RLF     L_byte,F
+Error[113]  : Symbol not previously defined (H_byte)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00117         RLF     H_byte,W
+Error[113]  : Symbol not previously defined (WARM_50)
+Error[152]  : Executable code and data must be defined in an appropriate section
+MPASM  5.51                          CALC.ASM   7-11-2019  14:26:31         PAGE  6
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0000                  00118         ADDWF   WARM_50,W
+Error[113]  : Symbol not previously defined (WARM_ENR)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00119         MOVWF   WARM_ENR
+Error[151]  : Operand contains unresolvable labels or is too complex
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00120         GOTO    GO_MAP
+                      00121 
+                      00122 ; +50 to +80
+Error[122]  : Illegal opcode (movab)
+                      00123 COLT_MID3       movab   COLT,MULc
+Error[113]  : Symbol not previously defined (MULc)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00124         BCF     MULc,7
+Error[113]  : Symbol not previously defined (MULc)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00125         BCF     MULc,6
+Error[113]  : Symbol not previously defined (WARM_80)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00126         MOVF    WARM_80,W
+Error[113]  : Symbol not previously defined (WARM_50)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00127         SUBWF   WARM_50,W
+Error[113]  : Symbol not previously defined (MULp)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00128         MOVWF   MULp
+Error[113]  : Symbol not previously defined (MUL8)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00129         CALL    MUL8
+Error[113]  : Symbol not previously defined (L_byte)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00130         RLF     L_byte,F
+Error[113]  : Symbol not previously defined (H_byte)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00131         RLF     H_byte,F
+Error[113]  : Symbol not previously defined (L_byte)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00132         RLF     L_byte,F
+Error[113]  : Symbol not previously defined (H_byte)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00133         RLF     H_byte,W
+Error[113]  : Symbol not previously defined (WARM_80)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00134         ADDWF   WARM_80,W
+Error[113]  : Symbol not previously defined (WARM_ENR)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00135         MOVWF   WARM_ENR
+                      00136 ;       CLRF    WARM_ENR
+                      00137 ; запуск вычисления ДАД АЦП
+Error[150]  : Labels must be defined in a code or data section when making an object file
+Error[113]  : Symbol not previously defined (ADCON0)
+Error[113]  : Symbol not previously defined (GO)
+Error[152]  : Executable code and data must be defined in an appropriate section
+MPASM  5.51                          CALC.ASM   7-11-2019  14:26:31         PAGE  7
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0000                  00138 GO_MAP  BSF     ADCON0,GO
+                      00139 ; Обогащение смеси после пуска двигателя
+Error[113]  : Symbol not previously defined (STAT)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00140         BTFSS   STAT,7          ; Проверка флага включения обогащения после старта
+Error[151]  : Operand contains unresolvable labels or is too complex
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00141         GOTO    GET_ACCEL
+Error[113]  : Symbol not previously defined (D_TPS)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00142         DECF    D_TPS,F
+Error[113]  : Symbol not previously defined (D_TPS)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00143         BTFSC   D_TPS,7
+Error[151]  : Operand contains unresolvable labels or is too complex
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00144         GOTO    SPD_E
+Error[113]  : Symbol not previously defined (STAT)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00145         BCF     STAT,7
+                      00146 ; вычисление режима обогащения
+Error[150]  : Labels must be defined in a code or data section when making an object file
+Error[113]  : Symbol not previously defined (TPS1)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00147 GET_ACCEL       MOVF    TPS1,W          ; Предыдущее ПДЗ
+Error[113]  : Symbol not previously defined (TPS)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00148         SUBWF   TPS,W           ; Вычитаем из предыдущего положения ДЗ настоящее
+Error[113]  : Symbol not previously defined (D_TPS1)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00149         MOVWF   D_TPS1          ; сохраняем как дельту
+                      00150 
+Error[113]  : Symbol not previously defined (STATUS)
+Error[113]  : Symbol not previously defined (C)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00151         BTFSS   STATUS,C                ; Проверяем на наличие ускорения
+Error[151]  : Operand contains unresolvable labels or is too complex
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00152         GOTO    D_ACCL
+                      00153 
+Error[113]  : Symbol not previously defined (STATUS)
+Error[113]  : Symbol not previously defined (Z)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00154         BTFSC   STATUS,Z                ; Проверяем на наличие ускорения
+Error[151]  : Operand contains unresolvable labels or is too complex
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00155         GOTO    ACCL_END
+                      00156 
+Error[113]  : Symbol not previously defined (ACL_THR)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00157         SUBLW   ACL_THR         ; Вычитаем  дельту с порога ускорения
+Error[113]  : Symbol not previously defined (STATUS)
+Error[113]  : Symbol not previously defined (C)
+MPASM  5.51                          CALC.ASM   7-11-2019  14:26:31         PAGE  8
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00158         BTFSC   STATUS,C                ; Проверяем порог ускорения
+Error[151]  : Operand contains unresolvable labels or is too complex
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00159         GOTO    ACCL_END
+                      00160 
+Error[113]  : Symbol not previously defined (STATUS)
+Error[113]  : Symbol not previously defined (C)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00161         BCF     STATUS,C
+Error[113]  : Symbol not previously defined (D_TPS1)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00162         RLF     D_TPS1,F                ; Поделить на 2 коэфф. обогащения
+Error[113]  : Symbol not previously defined (D_TPS)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00163         MOVF    D_TPS,W         ; текущее обогащение
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00164         ANDLW   B'01111111'
+Error[113]  : Symbol not previously defined (D_TPS1)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00165         SUBWF   D_TPS1,W                ; вычитаем текущее обогащение из вычисленного
+Error[113]  : Symbol not previously defined (STATUS)
+Error[113]  : Symbol not previously defined (Z)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00166         BTFSC   STATUS,Z
+Error[150]  : Labels must be defined in a code or data section when making an object file
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00167         GOTO    $+5
+Error[113]  : Symbol not previously defined (STATUS)
+Error[113]  : Symbol not previously defined (C)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00168         BTFSS   STATUS,C                ; если текущее обогащение меньше вычисленного, то
+Error[150]  : Labels must be defined in a code or data section when making an object file
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00169         GOTO    $+3
+Error[113]  : Symbol not previously defined (D_TPS1)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00170         MOVF    D_TPS1,W
+Error[113]  : Symbol not previously defined (D_TPS)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00171         MOVWF   D_TPS
+                      00172         
+Error[150]  : Labels must be defined in a code or data section when making an object file
+Error[113]  : Symbol not previously defined (ACCEL)
+Error[128]  : Missing argument(s)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00173 ACLEE   BSF     ACCEL           ; Вкл. светодиод акселерации
+Error[113]  : Symbol not previously defined (STAT)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00174         BSF     STAT,3          ; Вкл. флаг акселерации
+Error[113]  : Symbol not previously defined (D_TPS)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00175         BSF     D_TPS,7
+MPASM  5.51                          CALC.ASM   7-11-2019  14:26:31         PAGE  9
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Error[151]  : Operand contains unresolvable labels or is too complex
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00176         GOTO    SPD_E
+                      00177 ; Подпрограмма обеднения смеси при сбрасывании тапка
+Error[150]  : Labels must be defined in a code or data section when making an object file
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00178 D_ACCL  SUBLW   0FFH
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00179         SUBLW   80H
+Error[113]  : Symbol not previously defined (D_TPS)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00180         MOVWF   D_TPS
+Error[113]  : Symbol not previously defined (STAT)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00181         BSF     STAT,4
+Error[151]  : Operand contains unresolvable labels or is too complex
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00182         GOTO    SPD_E
+                      00183 
+Error[150]  : Labels must be defined in a code or data section when making an object file
+Error[113]  : Symbol not previously defined (D_TPS)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00184 ACCL_END        MOVF    D_TPS,W
+Error[113]  : Symbol not previously defined (STATUS)
+Error[113]  : Symbol not previously defined (Z)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00185         BTFSC   STATUS,Z
+Error[150]  : Labels must be defined in a code or data section when making an object file
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00186         GOTO    $+4
+Error[113]  : Symbol not previously defined (D_TPS)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00187         DECF    D_TPS,F
+Error[113]  : Symbol not previously defined (D_TPS)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00188         BTFSC   D_TPS,7
+Error[151]  : Operand contains unresolvable labels or is too complex
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00189         GOTO    ACLEE
+                      00190 
+Error[113]  : Symbol not previously defined (ACCEL)
+Error[128]  : Missing argument(s)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00191         BCF     ACCEL
+                      00192 ;       CLRF    D_TPS
+Error[113]  : Symbol not previously defined (STAT)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00193         BCF     STAT,3
+Error[113]  : Symbol not previously defined (STAT)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00194         BCF     STAT,4
+                      00195 ; Обработка таблицы объёмной эффективности в зависимости от оборотов двигателя
+Error[150]  : Labels must be defined in a code or data section when making an object file
+MPASM  5.51                          CALC.ASM   7-11-2019  14:26:31         PAGE 10
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Error[113]  : Symbol not previously defined (EngSC)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00196 SPD_E   CALL    EngSC
+Error[113]  : Symbol not previously defined (SPD_ENR)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00197         MOVWF   SPD_ENR
+                      00198 ; SPD_ENR=(обог%)/100*256
+                      00199 ; Обогащение по скорости=SPD_ENR/256*100
+                      00200 ; Экономайзер тапки в пол Основная смесь - 12,5
+Error[113]  : Symbol not previously defined (TPS)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00201         MOVF    TPS,W   
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00202         SUBLW   0CCH            ; Порог 4.5v
+Error[113]  : Symbol not previously defined (STATUS)
+Error[113]  : Symbol not previously defined (C)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00203         BTFSC   STATUS,C
+Error[151]  : Operand contains unresolvable labels or is too complex
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00204         GOTO    TR_EN
+Error[113]  : Symbol not previously defined (STAT)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00205         BTFSC   STAT,1          ; Проверка флага прогрева двигателя
+Error[151]  : Operand contains unresolvable labels or is too complex
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00206         GOTO    TR_EN
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00207         MOVLW   D'100'          ; Нижний порог оборотов 2500
+Error[113]  : Symbol not previously defined (SPD)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00208         SUBWF   SPD,W
+Error[113]  : Symbol not previously defined (STATUS)
+Error[113]  : Symbol not previously defined (C)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00209         BTFSS   STATUS,C
+Error[151]  : Operand contains unresolvable labels or is too complex
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00210         GOTO    TR_EN
+Warning[207]: Found label after column 1. (let)
+Error[122]  : Illegal opcode (Mul1Lo)
+0000                  00211         let     Mul1Lo,0B3H             ;  1.339
+Warning[207]: Found label after column 1. (let)
+Error[122]  : Illegal opcode (Mul1Hi)
+0000                  00212         let     Mul1Hi,0H
+Error[151]  : Operand contains unresolvable labels or is too complex
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00213         GOTO    MUL_ENR
+                      00214 ; Экономайзер мощностных режимов Основная смесь - 13,5
+Error[150]  : Labels must be defined in a code or data section when making an object file
+Error[113]  : Symbol not previously defined (MAP)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00215 TR_EN   MOVF    MAP,W   
+MPASM  5.51                          CALC.ASM   7-11-2019  14:26:31         PAGE 11
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00216         SUBLW   099H            ; Порог 80H-60KPa, 99H-70KPa, B3H-80KPa, BD-85KPa
+Error[113]  : Symbol not previously defined (STATUS)
+Error[113]  : Symbol not previously defined (C)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00217         BTFSC   STATUS,C                ; 
+Error[151]  : Operand contains unresolvable labels or is too complex
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00218         GOTO    EMR_OFF
+Warning[207]: Found label after column 1. (let)
+Error[122]  : Illegal opcode (Mul1Lo)
+0000                  00219         let     Mul1Lo,09DH             ; 1.244*127
+Warning[207]: Found label after column 1. (let)
+Error[122]  : Illegal opcode (Mul1Hi)
+0000                  00220         let     Mul1Hi,0H
+                      00221         
+Error[150]  : Labels must be defined in a code or data section when making an object file
+Error[113]  : Symbol not previously defined (ACCEL)
+Error[128]  : Missing argument(s)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00222 MUL_ENR BSF     ACCEL
+Error[113]  : Symbol not previously defined (STAT)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00223         BSF     STAT,6
+Error[113]  : Symbol not previously defined (SPD_ENR)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00224         MOVF    SPD_ENR,W
+Error[113]  : Symbol not previously defined (MULc)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00225         MOVWF   MULc
+Error[113]  : Symbol not previously defined (MUL16_8)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00226         CALL    MUL16_8
+Error[113]  : Symbol not previously defined (Mul1Lo)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00227         RLF     Mul1Lo,W                ; Помещаем бит 7 в С
+Error[113]  : Symbol not previously defined (Mul1Hi)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00228         RLF     Mul1Hi,W                ; Перемещаем карри в 1 бит
+Error[113]  : Symbol not previously defined (SPD_ENR)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00229         MOVWF   SPD_ENR
+Error[151]  : Operand contains unresolvable labels or is too complex
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00230         GOTO    READ_MAP
+                      00231 
+Error[150]  : Labels must be defined in a code or data section when making an object file
+Error[113]  : Symbol not previously defined (STAT)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00232 EMR_OFF BCF     STAT,6
+                      00233 ;-----------------------------------------------------
+                      00234 
+                      00235 
+MPASM  5.51                          CALC.ASM   7-11-2019  14:26:31         PAGE 12
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00236 
+Error[150]  : Labels must be defined in a code or data section when making an object file
+Error[113]  : Symbol not previously defined (ADCON0)
+Error[113]  : Symbol not previously defined (GO)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00237 READ_MAP        BTFSC   ADCON0,GO
+Error[150]  : Labels must be defined in a code or data section when making an object file
+Error[126]  : Argument out of range (FFFF not between 0000 and 1FFF)
+Message[306]: Crossing page boundary -- ensure page bits are set.
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00238         GOTO    $-1             ;Считываем значения с ДАД
+Error[113]  : Symbol not previously defined (ADRESH)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00239         MOVF    ADRESH,W
+Error[113]  : Symbol not previously defined (MAP)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00240         MOVWF   MAP             ;
+                      00241         
+                      00242 ; Проверка верхней границы
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00243         ADDLW   0FH             ; ДАД
+Error[113]  : Symbol not previously defined (STATUS)
+Error[113]  : Symbol not previously defined (C)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00244         BTFSS   STATUS,C
+Error[150]  : Labels must be defined in a code or data section when making an object file
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00245         GOTO    $+3
+Error[113]  : Symbol not previously defined (OFFSET)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00246         MOVLW   -OFFSET
+Error[113]  : Symbol not previously defined (ERR)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00247         BSF     ERR,5           ; Выставить флаг ошибки
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00248         MOVLW   0FH             ; ПРоверка нижней границы
+Error[113]  : Symbol not previously defined (MAP)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00249         SUBWF   MAP,W
+Error[113]  : Symbol not previously defined (STATUS)
+Error[113]  : Symbol not previously defined (C)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00250         BTFSC   STATUS,C
+Error[151]  : Operand contains unresolvable labels or is too complex
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00251         GOTO    ECON
+Error[113]  : Symbol not previously defined (OFFSET)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00252         MOVLW   OFFSET
+Error[113]  : Symbol not previously defined (MAP)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00253         MOVWF   MAP
+Error[113]  : Symbol not previously defined (ERR)
+MPASM  5.51                          CALC.ASM   7-11-2019  14:26:31         PAGE 13
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00254         BSF     ERR,5           ; Выставить флаг ошибки
+                      00255 ;-----------------------------------------------------
+                      00256 ;  ЭКОНОМАЙЗЕР ПРИНУДИТЕЛЬНОГО ХОЛОСТОГО ХОДА
+                      00257 ;-----------------------------------------------------
+Error[150]  : Labels must be defined in a code or data section when making an object file
+Error[113]  : Symbol not previously defined (STAT)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00258 ECON    BTFSS   STAT,7  
+Error[113]  : Symbol not previously defined (STAT)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00259         BTFSS   STAT,2          ; Проверка холостого хода
+Error[151]  : Operand contains unresolvable labels or is too complex
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00260         GOTO    Ln_Int
+                      00261 ; Добавил для устранения подёргивания на прогреве и ухода в ЭПХХ
+Error[113]  : Symbol not previously defined (COLT)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00262         BTFSC   COLT,7
+Error[151]  : Operand contains unresolvable labels or is too complex
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00263         GOTO    Ln_Int
+                      00264 
+                      00265 
+                      00266 
+Error[113]  : Symbol not previously defined (STAT)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00267         BTFSC   STAT,5          ; Проверка 
+Error[150]  : Labels must be defined in a code or data section when making an object file
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00268         GOTO    $+9     
+Error[113]  : Symbol not previously defined (SPD)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00269         MOVF    SPD,W           ; Верхний порог оборотов        
+Error[113]  : Symbol not previously defined (SPD_EPHH)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00270         SUBLW   (SPD_EPHH/.25)+4
+Error[113]  : Symbol not previously defined (STATUS)
+Error[113]  : Symbol not previously defined (C)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00271         BTFSC   STATUS,C        
+Error[151]  : Operand contains unresolvable labels or is too complex
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00272         GOTO    Ln_Int
+Error[113]  : Symbol not previously defined (STAT)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00273         BSF     STAT,5          ; Ставим бит включённого экономайзера
+Error[113]  : Symbol not previously defined (T_INJ_H)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00274         CLRF    T_INJ_H
+Error[113]  : Symbol not previously defined (T_INJ_L)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00275         CLRF    T_INJ_L
+MPASM  5.51                          CALC.ASM   7-11-2019  14:26:31         PAGE 14
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Error[113]  : Symbol not previously defined (EXT)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00276         GOTO    EXT
+                      00277 
+Error[113]  : Symbol not previously defined (SPD_EPHH)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00278         MOVLW   (SPD_EPHH/.25)-1                ; Нижний порог оборотов
+Error[113]  : Symbol not previously defined (SPD)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00279         SUBWF   SPD,W
+Error[113]  : Symbol not previously defined (STATUS)
+Error[113]  : Symbol not previously defined (C)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00280         BTFSS   STATUS,C
+Error[151]  : Operand contains unresolvable labels or is too complex
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00281         GOTO    Ln_Int
+Error[113]  : Symbol not previously defined (T_INJ_H)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00282         CLRF    T_INJ_H
+Error[113]  : Symbol not previously defined (T_INJ_L)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00283         CLRF    T_INJ_L
+Error[113]  : Symbol not previously defined (EXT)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00284         GOTO    EXT
+                      00285 
+                      00286 ;-----------------------------------------------------
+                      00287 ;  ЛИНЕЙНАЯ ИНТЕРПОЛЯЦИЯ ВЫЧИСЛЕНИЯ ВРЕМЕНИ ВПРЫСКА
+                      00288 ;-----------------------------------------------------
+Error[150]  : Labels must be defined in a code or data section when making an object file
+Error[113]  : Symbol not previously defined (STAT)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00289 Ln_Int  BCF     STAT,5
+                      00290 ;       MOVLW   .7;OFFSET
+                      00291 ;       SUBWF   MAP,W
+Error[113]  : Symbol not previously defined (MAP)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00292         MOVF    MAP,W
+Error[113]  : Symbol not previously defined (MULc)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00293         MOVWF   MULc            ; MULc=(MAP-Offset)
+                      00294         
+Error[113]  : Symbol not previously defined (RqFl)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00295         MOVF    RqFl,W
+Error[113]  : Symbol not previously defined (Mul1Lo)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00296         MOVWF   Mul1Lo          ; MULp=(RqF-RCO)
+                      00297 
+Error[113]  : Symbol not previously defined (RqFh)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00298         MOVF    RqFh,W
+MPASM  5.51                          CALC.ASM   7-11-2019  14:26:31         PAGE 15
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Error[113]  : Symbol not previously defined (Mul1Hi)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00299         MOVWF   Mul1Hi          ; MULp=(RqF-RCO)
+                      00300 
+Error[113]  : Symbol not previously defined (MUL16_8)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00301         CALL    MUL16_8         ; Умножение 16х8
+Error[113]  : Symbol not previously defined (Mul1Hi)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00302         MOVF    Mul1Hi,W
+Error[113]  : Symbol not previously defined (T_INJ_L)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00303         MOVWF   T_INJ_L
+                      00304 
+Error[113]  : Symbol not previously defined (ResHi)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00305         MOVF    ResHi,W
+Error[113]  : Symbol not previously defined (T_INJ_H)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00306         MOVWF   T_INJ_H
+                      00307 
+                      00308 ; Выбор канала АЦП ДПДЗ
+Warning[207]: Found label after column 1. (let)
+Error[122]  : Illegal opcode (ADCON0)
+                      00309         let     ADCON0,ADC_TPS  ; AN0 TPS
+                      00310 ; Корректировка смеси в зависимости от оборотов
+Warning[207]: Found label after column 1. (movab)
+Error[122]  : Illegal opcode (SPD_ENR)
+                      00311         movab   SPD_ENR,MULc
+Warning[207]: Found label after column 1. (movab)
+Error[122]  : Illegal opcode (T_INJ_L)
+                      00312         movab   T_INJ_L,Mul1Lo
+Warning[207]: Found label after column 1. (movab)
+Error[122]  : Illegal opcode (T_INJ_H)
+                      00313         movab   T_INJ_H,Mul1Hi
+Error[113]  : Symbol not previously defined (MUL16_8)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00314         CALL    MUL16_8         ; Умножение 16х8
+Error[113]  : Symbol not previously defined (Mul1Lo)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00315         RLF     Mul1Lo,W
+Error[113]  : Symbol not previously defined (Mul1Hi)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00316         RLF     Mul1Hi,W
+Error[113]  : Symbol not previously defined (Mul1Hi)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00317         MOVF    Mul1Hi,W
+Error[113]  : Symbol not previously defined (T_INJ_L)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00318         MOVWF   T_INJ_L
+Error[113]  : Symbol not previously defined (ResHi)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00319         RLF     ResHi,W
+MPASM  5.51                          CALC.ASM   7-11-2019  14:26:31         PAGE 16
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Error[113]  : Symbol not previously defined (ResHi)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00320         MOVF    ResHi,W
+Error[113]  : Symbol not previously defined (T_INJ_H)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00321         MOVWF   T_INJ_H
+                      00322 
+Error[113]  : Symbol not previously defined (STAT)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00323         BTFSS   STAT,1          ; Проверка флага прогрева двигателя
+Error[151]  : Operand contains unresolvable labels or is too complex
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00324         GOTO    ACCL
+                      00325         
+                      00326 
+Error[150]  : Labels must be defined in a code or data section when making an object file
+Error[113]  : Symbol not previously defined (WARM_ENR)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00327 Warm_Enr        RRF     WARM_ENR,F
+Error[113]  : Symbol not previously defined (WARM_ENR)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00328         BSF     WARM_ENR,7
+Warning[207]: Found label after column 1. (movab)
+Error[122]  : Illegal opcode (WARM_ENR)
+0000                  00329         movab   WARM_ENR,MULc
+Warning[207]: Found label after column 1. (movab)
+Error[122]  : Illegal opcode (T_INJ_L)
+0000                  00330         movab   T_INJ_L,Mul1Lo
+Warning[207]: Found label after column 1. (movab)
+Error[122]  : Illegal opcode (T_INJ_H)
+0000                  00331         movab   T_INJ_H,Mul1Hi
+Error[113]  : Symbol not previously defined (MUL16_8)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00332         CALL    MUL16_8         ; Умножение 16х8
+Error[113]  : Symbol not previously defined (Mul1Lo)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00333         RLF     Mul1Lo,W
+Error[113]  : Symbol not previously defined (Mul1Hi)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00334         RLF     Mul1Hi,W
+Error[113]  : Symbol not previously defined (T_INJ_L)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00335         MOVWF   T_INJ_L
+Error[113]  : Symbol not previously defined (ResHi)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00336         RLF     ResHi,W
+Error[113]  : Symbol not previously defined (T_INJ_H)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00337         MOVWF   T_INJ_H
+                      00338 
+                      00339 
+                      00340 
+                      00341 ; Програмный модуль вычисления обогащения
+MPASM  5.51                          CALC.ASM   7-11-2019  14:26:31         PAGE 17
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Error[150]  : Labels must be defined in a code or data section when making an object file
+Error[113]  : Symbol not previously defined (STAT)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00342 ACCL    BTFSC   STAT,7  
+Error[150]  : Labels must be defined in a code or data section when making an object file
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00343         GOTO    $+5
+Error[113]  : Symbol not previously defined (STAT)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00344         BTFSS   STAT,3
+Error[113]  : Symbol not previously defined (STAT)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00345         BTFSC   STAT,4
+Error[150]  : Labels must be defined in a code or data section when making an object file
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00346         GOTO    $+2
+Error[151]  : Operand contains unresolvable labels or is too complex
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00347         GOTO    EXT2
+Warning[207]: Found label after column 1. (movab)
+Error[122]  : Illegal opcode (D_TPS)
+0000                  00348         movab   D_TPS,MULc
+Warning[207]: Found label after column 1. (movab)
+Error[122]  : Illegal opcode (T_INJ_L)
+0000                  00349         movab   T_INJ_L,Mul1Lo
+Warning[207]: Found label after column 1. (movab)
+Error[122]  : Illegal opcode (T_INJ_H)
+0000                  00350         movab   T_INJ_H,Mul1Hi
+Error[113]  : Symbol not previously defined (MUL16_8)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00351         CALL    MUL16_8         ; Умножение 16х8
+Error[113]  : Symbol not previously defined (Mul1Lo)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00352         RLF     Mul1Lo,W
+Error[113]  : Symbol not previously defined (Mul1Hi)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00353         RLF     Mul1Hi,W
+Error[113]  : Symbol not previously defined (T_INJ_L)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00354         MOVWF   T_INJ_L
+Error[113]  : Symbol not previously defined (ResHi)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00355         RLF     ResHi,W
+Error[113]  : Symbol not previously defined (T_INJ_H)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00356         MOVWF   T_INJ_H
+                      00357 
+                      00358 ; запуск вычисления АЦП ДПДЗ
+Error[150]  : Labels must be defined in a code or data section when making an object file
+Error[113]  : Symbol not previously defined (STAT)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00359 EXT2    BCF     STAT,5
+Error[113]  : Symbol not previously defined (ADCON0)
+MPASM  5.51                          CALC.ASM   7-11-2019  14:26:31         PAGE 18
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Error[113]  : Symbol not previously defined (GO)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00360         BSF     ADCON0,GO
+Error[113]  : Symbol not previously defined (LAG)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00361         CALL    LAG
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00362         RETURN
+                      00363 ; Выход в режиме экономайзера ПХХ
+Error[122]  : Illegal opcode (let)
+                      00364 EXT     let     ADCON0,ADC_TPS  ; AN0 TPS
+Error[113]  : Symbol not previously defined (DEL)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00365         CALL    DEL
+Error[113]  : Symbol not previously defined (ADCON0)
+Error[113]  : Symbol not previously defined (GO)
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00366         BSF     ADCON0,GO
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00367         RETURN
+Error[129]  : Expected (END)
+MPASM  5.51                          CALC.ASM   7-11-2019  14:26:31         PAGE 19
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+ACCL                              00000000
+ACCL_END                          00000000
+ACLEE                             00000000
+CALC                              00000000
+COLT_MID                          00000000
+D_ACCL                            00000000
+ECON                              00000000
+EMR_OFF                           00000000
+EXT2                              00000000
+GET_ACCEL                         00000000
+GO_MAP                            00000000
+Ln_Int                            00000000
+MUL_ENR                           00000000
+M_CALC                            00000000
+READ_MAP                          00000000
+SPD_E                             00000000
+TR_EN                             00000000
+Warm_Enr                          00000000
+__16F876A                         00000001
+__DEBUG                           1
+__MPLAB_DEBUGGER_PK3              1
+
+Errors   :   537
+Warnings :    17 reported,     0 suppressed
+Messages :     1 reported,     0 suppressed
+
+

@@ -1,0 +1,555 @@
+Error[150]   M:\WEGA\WEGA_OLD\CALC.ASM 4 : Labels must be defined in a code or data section when making an object file
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 13 : Symbol not previously defined (STAT)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 13 : Executable code and data must be defined in an appropriate section
+Error[151]   M:\WEGA\WEGA_OLD\CALC.ASM 14 : Operand contains unresolvable labels or is too complex
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 14 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 16 : Symbol not previously defined (TPS)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 16 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 17 : Symbol not previously defined (FL_CLEAR)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 17 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 18 : Symbol not previously defined (STATUS)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 18 : Symbol not previously defined (C)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 18 : Executable code and data must be defined in an appropriate section
+Error[150]   M:\WEGA\WEGA_OLD\CALC.ASM 19 : Labels must be defined in a code or data section when making an object file
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 19 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 20 : Symbol not previously defined (T_INJ_H)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 20 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 21 : Symbol not previously defined (T_INJ_L)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 21 : Executable code and data must be defined in an appropriate section
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 22 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 24 : Symbol not previously defined (Mul1Hi)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 24 : Executable code and data must be defined in an appropriate section
+Warning[207] M:\WEGA\WEGA_OLD\CALC.ASM 25 : Found label after column 1. (movab)
+Error[122]   M:\WEGA\WEGA_OLD\CALC.ASM 25 : Illegal opcode (COLT)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 28 : Symbol not previously defined (CRANK_COLT)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 28 : Symbol not previously defined (CRANK_HOT)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 28 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 29 : Symbol not previously defined (Mul1Lo)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 29 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 36 : Symbol not previously defined (CRANK_COLT)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 36 : Symbol not previously defined (CRANK_HOT)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 36 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 37 : Symbol not previously defined (Mul1Hi)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 37 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 42 : Symbol not previously defined (MUL16_8)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 42 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 43 : Symbol not previously defined (Mul1Hi)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 43 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 44 : Symbol not previously defined (CRANK_HOT)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 44 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 45 : Symbol not previously defined (T_INJ_L)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 45 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 46 : Symbol not previously defined (STATUS)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 46 : Symbol not previously defined (C)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 46 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 47 : Symbol not previously defined (ResHi)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 47 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 48 : Symbol not previously defined (ResHi)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 48 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 49 : Symbol not previously defined (CRANK_HOT)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 49 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 50 : Symbol not previously defined (T_INJ_H)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 50 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 53 : Symbol not previously defined (D_TPS)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 53 : Executable code and data must be defined in an appropriate section
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 56 : Executable code and data must be defined in an appropriate section
+Error[150]   M:\WEGA\WEGA_OLD\CALC.ASM 62 : Labels must be defined in a code or data section when making an object file
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 62 : Symbol not previously defined (Mul1Hi)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 62 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 69 : Symbol not previously defined (COLT)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 69 : Executable code and data must be defined in an appropriate section
+Error[151]   M:\WEGA\WEGA_OLD\CALC.ASM 70 : Operand contains unresolvable labels or is too complex
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 70 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 71 : Symbol not previously defined (COLT)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 71 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 72 : Symbol not previously defined (COLT_MID2)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 72 : Executable code and data must be defined in an appropriate section
+Warning[207] M:\WEGA\WEGA_OLD\CALC.ASM 74 : Found label after column 1. (movab)
+Error[122]   M:\WEGA\WEGA_OLD\CALC.ASM 74 : Illegal opcode (COLT)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 75 : Symbol not previously defined (MULc)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 75 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 76 : Symbol not previously defined (MULc)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 76 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 77 : Symbol not previously defined (ENR_12)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 77 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 78 : Symbol not previously defined (WARM_40)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 78 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 79 : Symbol not previously defined (MULp)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 79 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 80 : Symbol not previously defined (MUL8)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 80 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 81 : Symbol not previously defined (L_byte)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 81 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 82 : Symbol not previously defined (H_byte)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 82 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 83 : Symbol not previously defined (H_byte)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 83 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 84 : Symbol not previously defined (ENR_12)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 84 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 85 : Symbol not previously defined (WARM_ENR)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 85 : Executable code and data must be defined in an appropriate section
+Error[151]   M:\WEGA\WEGA_OLD\CALC.ASM 86 : Operand contains unresolvable labels or is too complex
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 86 : Executable code and data must be defined in an appropriate section
+Error[122]   M:\WEGA\WEGA_OLD\CALC.ASM 89 : Illegal opcode (movab)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 90 : Symbol not previously defined (MULc)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 90 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 91 : Symbol not previously defined (MULc)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 91 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 92 : Symbol not previously defined (WARM_20)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 92 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 93 : Symbol not previously defined (ENR_12)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 93 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 94 : Symbol not previously defined (MULp)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 94 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 95 : Symbol not previously defined (MUL8)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 95 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 96 : Symbol not previously defined (L_byte)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 96 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 97 : Symbol not previously defined (H_byte)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 97 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 98 : Symbol not previously defined (L_byte)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 98 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 99 : Symbol not previously defined (H_byte)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 99 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 100 : Symbol not previously defined (WARM_20)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 100 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 101 : Symbol not previously defined (WARM_ENR)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 101 : Executable code and data must be defined in an appropriate section
+Error[151]   M:\WEGA\WEGA_OLD\CALC.ASM 102 : Operand contains unresolvable labels or is too complex
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 102 : Executable code and data must be defined in an appropriate section
+Error[150]   M:\WEGA\WEGA_OLD\CALC.ASM 104 : Labels must be defined in a code or data section when making an object file
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 104 : Symbol not previously defined (COLT)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 104 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 105 : Symbol not previously defined (COLT_MID3)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 105 : Executable code and data must be defined in an appropriate section
+Warning[207] M:\WEGA\WEGA_OLD\CALC.ASM 107 : Found label after column 1. (movab)
+Error[122]   M:\WEGA\WEGA_OLD\CALC.ASM 107 : Illegal opcode (COLT)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 108 : Symbol not previously defined (MULc)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 108 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 109 : Symbol not previously defined (MULc)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 109 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 110 : Symbol not previously defined (WARM_50)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 110 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 111 : Symbol not previously defined (WARM_20)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 111 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 112 : Symbol not previously defined (MULp)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 112 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 113 : Symbol not previously defined (MUL8)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 113 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 114 : Symbol not previously defined (L_byte)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 114 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 115 : Symbol not previously defined (H_byte)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 115 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 116 : Symbol not previously defined (L_byte)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 116 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 117 : Symbol not previously defined (H_byte)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 117 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 118 : Symbol not previously defined (WARM_50)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 118 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 119 : Symbol not previously defined (WARM_ENR)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 119 : Executable code and data must be defined in an appropriate section
+Error[151]   M:\WEGA\WEGA_OLD\CALC.ASM 120 : Operand contains unresolvable labels or is too complex
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 120 : Executable code and data must be defined in an appropriate section
+Error[122]   M:\WEGA\WEGA_OLD\CALC.ASM 123 : Illegal opcode (movab)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 124 : Symbol not previously defined (MULc)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 124 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 125 : Symbol not previously defined (MULc)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 125 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 126 : Symbol not previously defined (WARM_80)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 126 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 127 : Symbol not previously defined (WARM_50)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 127 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 128 : Symbol not previously defined (MULp)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 128 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 129 : Symbol not previously defined (MUL8)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 129 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 130 : Symbol not previously defined (L_byte)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 130 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 131 : Symbol not previously defined (H_byte)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 131 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 132 : Symbol not previously defined (L_byte)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 132 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 133 : Symbol not previously defined (H_byte)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 133 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 134 : Symbol not previously defined (WARM_80)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 134 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 135 : Symbol not previously defined (WARM_ENR)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 135 : Executable code and data must be defined in an appropriate section
+Error[150]   M:\WEGA\WEGA_OLD\CALC.ASM 138 : Labels must be defined in a code or data section when making an object file
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 138 : Symbol not previously defined (ADCON0)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 138 : Symbol not previously defined (GO)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 138 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 140 : Symbol not previously defined (STAT)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 140 : Executable code and data must be defined in an appropriate section
+Error[151]   M:\WEGA\WEGA_OLD\CALC.ASM 141 : Operand contains unresolvable labels or is too complex
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 141 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 142 : Symbol not previously defined (D_TPS)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 142 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 143 : Symbol not previously defined (D_TPS)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 143 : Executable code and data must be defined in an appropriate section
+Error[151]   M:\WEGA\WEGA_OLD\CALC.ASM 144 : Operand contains unresolvable labels or is too complex
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 144 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 145 : Symbol not previously defined (STAT)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 145 : Executable code and data must be defined in an appropriate section
+Error[150]   M:\WEGA\WEGA_OLD\CALC.ASM 147 : Labels must be defined in a code or data section when making an object file
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 147 : Symbol not previously defined (TPS1)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 147 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 148 : Symbol not previously defined (TPS)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 148 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 149 : Symbol not previously defined (D_TPS1)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 149 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 151 : Symbol not previously defined (STATUS)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 151 : Symbol not previously defined (C)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 151 : Executable code and data must be defined in an appropriate section
+Error[151]   M:\WEGA\WEGA_OLD\CALC.ASM 152 : Operand contains unresolvable labels or is too complex
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 152 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 154 : Symbol not previously defined (STATUS)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 154 : Symbol not previously defined (Z)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 154 : Executable code and data must be defined in an appropriate section
+Error[151]   M:\WEGA\WEGA_OLD\CALC.ASM 155 : Operand contains unresolvable labels or is too complex
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 155 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 157 : Symbol not previously defined (ACL_THR)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 157 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 158 : Symbol not previously defined (STATUS)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 158 : Symbol not previously defined (C)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 158 : Executable code and data must be defined in an appropriate section
+Error[151]   M:\WEGA\WEGA_OLD\CALC.ASM 159 : Operand contains unresolvable labels or is too complex
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 159 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 161 : Symbol not previously defined (STATUS)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 161 : Symbol not previously defined (C)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 161 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 162 : Symbol not previously defined (D_TPS1)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 162 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 163 : Symbol not previously defined (D_TPS)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 163 : Executable code and data must be defined in an appropriate section
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 164 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 165 : Symbol not previously defined (D_TPS1)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 165 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 166 : Symbol not previously defined (STATUS)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 166 : Symbol not previously defined (Z)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 166 : Executable code and data must be defined in an appropriate section
+Error[150]   M:\WEGA\WEGA_OLD\CALC.ASM 167 : Labels must be defined in a code or data section when making an object file
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 167 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 168 : Symbol not previously defined (STATUS)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 168 : Symbol not previously defined (C)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 168 : Executable code and data must be defined in an appropriate section
+Error[150]   M:\WEGA\WEGA_OLD\CALC.ASM 169 : Labels must be defined in a code or data section when making an object file
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 169 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 170 : Symbol not previously defined (D_TPS1)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 170 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 171 : Symbol not previously defined (D_TPS)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 171 : Executable code and data must be defined in an appropriate section
+Error[150]   M:\WEGA\WEGA_OLD\CALC.ASM 173 : Labels must be defined in a code or data section when making an object file
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 173 : Symbol not previously defined (ACCEL)
+Error[128]   M:\WEGA\WEGA_OLD\CALC.ASM 173 : Missing argument(s)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 173 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 174 : Symbol not previously defined (STAT)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 174 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 175 : Symbol not previously defined (D_TPS)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 175 : Executable code and data must be defined in an appropriate section
+Error[151]   M:\WEGA\WEGA_OLD\CALC.ASM 176 : Operand contains unresolvable labels or is too complex
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 176 : Executable code and data must be defined in an appropriate section
+Error[150]   M:\WEGA\WEGA_OLD\CALC.ASM 178 : Labels must be defined in a code or data section when making an object file
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 178 : Executable code and data must be defined in an appropriate section
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 179 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 180 : Symbol not previously defined (D_TPS)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 180 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 181 : Symbol not previously defined (STAT)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 181 : Executable code and data must be defined in an appropriate section
+Error[151]   M:\WEGA\WEGA_OLD\CALC.ASM 182 : Operand contains unresolvable labels or is too complex
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 182 : Executable code and data must be defined in an appropriate section
+Error[150]   M:\WEGA\WEGA_OLD\CALC.ASM 184 : Labels must be defined in a code or data section when making an object file
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 184 : Symbol not previously defined (D_TPS)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 184 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 185 : Symbol not previously defined (STATUS)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 185 : Symbol not previously defined (Z)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 185 : Executable code and data must be defined in an appropriate section
+Error[150]   M:\WEGA\WEGA_OLD\CALC.ASM 186 : Labels must be defined in a code or data section when making an object file
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 186 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 187 : Symbol not previously defined (D_TPS)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 187 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 188 : Symbol not previously defined (D_TPS)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 188 : Executable code and data must be defined in an appropriate section
+Error[151]   M:\WEGA\WEGA_OLD\CALC.ASM 189 : Operand contains unresolvable labels or is too complex
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 189 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 191 : Symbol not previously defined (ACCEL)
+Error[128]   M:\WEGA\WEGA_OLD\CALC.ASM 191 : Missing argument(s)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 191 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 193 : Symbol not previously defined (STAT)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 193 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 194 : Symbol not previously defined (STAT)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 194 : Executable code and data must be defined in an appropriate section
+Error[150]   M:\WEGA\WEGA_OLD\CALC.ASM 196 : Labels must be defined in a code or data section when making an object file
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 196 : Symbol not previously defined (EngSC)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 196 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 197 : Symbol not previously defined (SPD_ENR)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 197 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 201 : Symbol not previously defined (TPS)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 201 : Executable code and data must be defined in an appropriate section
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 202 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 203 : Symbol not previously defined (STATUS)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 203 : Symbol not previously defined (C)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 203 : Executable code and data must be defined in an appropriate section
+Error[151]   M:\WEGA\WEGA_OLD\CALC.ASM 204 : Operand contains unresolvable labels or is too complex
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 204 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 205 : Symbol not previously defined (STAT)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 205 : Executable code and data must be defined in an appropriate section
+Error[151]   M:\WEGA\WEGA_OLD\CALC.ASM 206 : Operand contains unresolvable labels or is too complex
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 206 : Executable code and data must be defined in an appropriate section
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 207 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 208 : Symbol not previously defined (SPD)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 208 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 209 : Symbol not previously defined (STATUS)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 209 : Symbol not previously defined (C)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 209 : Executable code and data must be defined in an appropriate section
+Error[151]   M:\WEGA\WEGA_OLD\CALC.ASM 210 : Operand contains unresolvable labels or is too complex
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 210 : Executable code and data must be defined in an appropriate section
+Warning[207] M:\WEGA\WEGA_OLD\CALC.ASM 211 : Found label after column 1. (let)
+Error[122]   M:\WEGA\WEGA_OLD\CALC.ASM 211 : Illegal opcode (Mul1Lo)
+Warning[207] M:\WEGA\WEGA_OLD\CALC.ASM 212 : Found label after column 1. (let)
+Error[122]   M:\WEGA\WEGA_OLD\CALC.ASM 212 : Illegal opcode (Mul1Hi)
+Error[151]   M:\WEGA\WEGA_OLD\CALC.ASM 213 : Operand contains unresolvable labels or is too complex
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 213 : Executable code and data must be defined in an appropriate section
+Error[150]   M:\WEGA\WEGA_OLD\CALC.ASM 215 : Labels must be defined in a code or data section when making an object file
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 215 : Symbol not previously defined (MAP)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 215 : Executable code and data must be defined in an appropriate section
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 216 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 217 : Symbol not previously defined (STATUS)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 217 : Symbol not previously defined (C)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 217 : Executable code and data must be defined in an appropriate section
+Error[151]   M:\WEGA\WEGA_OLD\CALC.ASM 218 : Operand contains unresolvable labels or is too complex
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 218 : Executable code and data must be defined in an appropriate section
+Warning[207] M:\WEGA\WEGA_OLD\CALC.ASM 219 : Found label after column 1. (let)
+Error[122]   M:\WEGA\WEGA_OLD\CALC.ASM 219 : Illegal opcode (Mul1Lo)
+Warning[207] M:\WEGA\WEGA_OLD\CALC.ASM 220 : Found label after column 1. (let)
+Error[122]   M:\WEGA\WEGA_OLD\CALC.ASM 220 : Illegal opcode (Mul1Hi)
+Error[150]   M:\WEGA\WEGA_OLD\CALC.ASM 222 : Labels must be defined in a code or data section when making an object file
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 222 : Symbol not previously defined (ACCEL)
+Error[128]   M:\WEGA\WEGA_OLD\CALC.ASM 222 : Missing argument(s)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 222 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 223 : Symbol not previously defined (STAT)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 223 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 224 : Symbol not previously defined (SPD_ENR)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 224 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 225 : Symbol not previously defined (MULc)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 225 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 226 : Symbol not previously defined (MUL16_8)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 226 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 227 : Symbol not previously defined (Mul1Lo)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 227 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 228 : Symbol not previously defined (Mul1Hi)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 228 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 229 : Symbol not previously defined (SPD_ENR)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 229 : Executable code and data must be defined in an appropriate section
+Error[151]   M:\WEGA\WEGA_OLD\CALC.ASM 230 : Operand contains unresolvable labels or is too complex
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 230 : Executable code and data must be defined in an appropriate section
+Error[150]   M:\WEGA\WEGA_OLD\CALC.ASM 232 : Labels must be defined in a code or data section when making an object file
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 232 : Symbol not previously defined (STAT)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 232 : Executable code and data must be defined in an appropriate section
+Error[150]   M:\WEGA\WEGA_OLD\CALC.ASM 237 : Labels must be defined in a code or data section when making an object file
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 237 : Symbol not previously defined (ADCON0)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 237 : Symbol not previously defined (GO)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 237 : Executable code and data must be defined in an appropriate section
+Error[150]   M:\WEGA\WEGA_OLD\CALC.ASM 238 : Labels must be defined in a code or data section when making an object file
+Error[126]   M:\WEGA\WEGA_OLD\CALC.ASM 238 : Argument out of range (FFFF not between 0000 and 1FFF)
+Message[306] M:\WEGA\WEGA_OLD\CALC.ASM 238 : Crossing page boundary -- ensure page bits are set.
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 238 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 239 : Symbol not previously defined (ADRESH)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 239 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 240 : Symbol not previously defined (MAP)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 240 : Executable code and data must be defined in an appropriate section
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 243 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 244 : Symbol not previously defined (STATUS)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 244 : Symbol not previously defined (C)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 244 : Executable code and data must be defined in an appropriate section
+Error[150]   M:\WEGA\WEGA_OLD\CALC.ASM 245 : Labels must be defined in a code or data section when making an object file
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 245 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 246 : Symbol not previously defined (OFFSET)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 246 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 247 : Symbol not previously defined (ERR)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 247 : Executable code and data must be defined in an appropriate section
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 248 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 249 : Symbol not previously defined (MAP)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 249 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 250 : Symbol not previously defined (STATUS)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 250 : Symbol not previously defined (C)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 250 : Executable code and data must be defined in an appropriate section
+Error[151]   M:\WEGA\WEGA_OLD\CALC.ASM 251 : Operand contains unresolvable labels or is too complex
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 251 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 252 : Symbol not previously defined (OFFSET)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 252 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 253 : Symbol not previously defined (MAP)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 253 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 254 : Symbol not previously defined (ERR)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 254 : Executable code and data must be defined in an appropriate section
+Error[150]   M:\WEGA\WEGA_OLD\CALC.ASM 258 : Labels must be defined in a code or data section when making an object file
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 258 : Symbol not previously defined (STAT)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 258 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 259 : Symbol not previously defined (STAT)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 259 : Executable code and data must be defined in an appropriate section
+Error[151]   M:\WEGA\WEGA_OLD\CALC.ASM 260 : Operand contains unresolvable labels or is too complex
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 260 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 262 : Symbol not previously defined (COLT)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 262 : Executable code and data must be defined in an appropriate section
+Error[151]   M:\WEGA\WEGA_OLD\CALC.ASM 263 : Operand contains unresolvable labels or is too complex
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 263 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 267 : Symbol not previously defined (STAT)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 267 : Executable code and data must be defined in an appropriate section
+Error[150]   M:\WEGA\WEGA_OLD\CALC.ASM 268 : Labels must be defined in a code or data section when making an object file
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 268 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 269 : Symbol not previously defined (SPD)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 269 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 270 : Symbol not previously defined (SPD_EPHH)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 270 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 271 : Symbol not previously defined (STATUS)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 271 : Symbol not previously defined (C)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 271 : Executable code and data must be defined in an appropriate section
+Error[151]   M:\WEGA\WEGA_OLD\CALC.ASM 272 : Operand contains unresolvable labels or is too complex
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 272 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 273 : Symbol not previously defined (STAT)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 273 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 274 : Symbol not previously defined (T_INJ_H)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 274 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 275 : Symbol not previously defined (T_INJ_L)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 275 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 276 : Symbol not previously defined (EXT)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 276 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 278 : Symbol not previously defined (SPD_EPHH)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 278 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 279 : Symbol not previously defined (SPD)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 279 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 280 : Symbol not previously defined (STATUS)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 280 : Symbol not previously defined (C)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 280 : Executable code and data must be defined in an appropriate section
+Error[151]   M:\WEGA\WEGA_OLD\CALC.ASM 281 : Operand contains unresolvable labels or is too complex
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 281 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 282 : Symbol not previously defined (T_INJ_H)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 282 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 283 : Symbol not previously defined (T_INJ_L)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 283 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 284 : Symbol not previously defined (EXT)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 284 : Executable code and data must be defined in an appropriate section
+Error[150]   M:\WEGA\WEGA_OLD\CALC.ASM 289 : Labels must be defined in a code or data section when making an object file
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 289 : Symbol not previously defined (STAT)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 289 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 292 : Symbol not previously defined (MAP)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 292 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 293 : Symbol not previously defined (MULc)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 293 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 295 : Symbol not previously defined (RqFl)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 295 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 296 : Symbol not previously defined (Mul1Lo)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 296 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 298 : Symbol not previously defined (RqFh)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 298 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 299 : Symbol not previously defined (Mul1Hi)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 299 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 301 : Symbol not previously defined (MUL16_8)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 301 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 302 : Symbol not previously defined (Mul1Hi)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 302 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 303 : Symbol not previously defined (T_INJ_L)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 303 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 305 : Symbol not previously defined (ResHi)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 305 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 306 : Symbol not previously defined (T_INJ_H)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 306 : Executable code and data must be defined in an appropriate section
+Warning[207] M:\WEGA\WEGA_OLD\CALC.ASM 309 : Found label after column 1. (let)
+Error[122]   M:\WEGA\WEGA_OLD\CALC.ASM 309 : Illegal opcode (ADCON0)
+Warning[207] M:\WEGA\WEGA_OLD\CALC.ASM 311 : Found label after column 1. (movab)
+Error[122]   M:\WEGA\WEGA_OLD\CALC.ASM 311 : Illegal opcode (SPD_ENR)
+Warning[207] M:\WEGA\WEGA_OLD\CALC.ASM 312 : Found label after column 1. (movab)
+Error[122]   M:\WEGA\WEGA_OLD\CALC.ASM 312 : Illegal opcode (T_INJ_L)
+Warning[207] M:\WEGA\WEGA_OLD\CALC.ASM 313 : Found label after column 1. (movab)
+Error[122]   M:\WEGA\WEGA_OLD\CALC.ASM 313 : Illegal opcode (T_INJ_H)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 314 : Symbol not previously defined (MUL16_8)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 314 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 315 : Symbol not previously defined (Mul1Lo)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 315 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 316 : Symbol not previously defined (Mul1Hi)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 316 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 317 : Symbol not previously defined (Mul1Hi)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 317 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 318 : Symbol not previously defined (T_INJ_L)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 318 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 319 : Symbol not previously defined (ResHi)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 319 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 320 : Symbol not previously defined (ResHi)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 320 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 321 : Symbol not previously defined (T_INJ_H)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 321 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 323 : Symbol not previously defined (STAT)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 323 : Executable code and data must be defined in an appropriate section
+Error[151]   M:\WEGA\WEGA_OLD\CALC.ASM 324 : Operand contains unresolvable labels or is too complex
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 324 : Executable code and data must be defined in an appropriate section
+Error[150]   M:\WEGA\WEGA_OLD\CALC.ASM 327 : Labels must be defined in a code or data section when making an object file
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 327 : Symbol not previously defined (WARM_ENR)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 327 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 328 : Symbol not previously defined (WARM_ENR)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 328 : Executable code and data must be defined in an appropriate section
+Warning[207] M:\WEGA\WEGA_OLD\CALC.ASM 329 : Found label after column 1. (movab)
+Error[122]   M:\WEGA\WEGA_OLD\CALC.ASM 329 : Illegal opcode (WARM_ENR)
+Warning[207] M:\WEGA\WEGA_OLD\CALC.ASM 330 : Found label after column 1. (movab)
+Error[122]   M:\WEGA\WEGA_OLD\CALC.ASM 330 : Illegal opcode (T_INJ_L)
+Warning[207] M:\WEGA\WEGA_OLD\CALC.ASM 331 : Found label after column 1. (movab)
+Error[122]   M:\WEGA\WEGA_OLD\CALC.ASM 331 : Illegal opcode (T_INJ_H)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 332 : Symbol not previously defined (MUL16_8)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 332 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 333 : Symbol not previously defined (Mul1Lo)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 333 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 334 : Symbol not previously defined (Mul1Hi)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 334 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 335 : Symbol not previously defined (T_INJ_L)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 335 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 336 : Symbol not previously defined (ResHi)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 336 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 337 : Symbol not previously defined (T_INJ_H)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 337 : Executable code and data must be defined in an appropriate section
+Error[150]   M:\WEGA\WEGA_OLD\CALC.ASM 342 : Labels must be defined in a code or data section when making an object file
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 342 : Symbol not previously defined (STAT)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 342 : Executable code and data must be defined in an appropriate section
+Error[150]   M:\WEGA\WEGA_OLD\CALC.ASM 343 : Labels must be defined in a code or data section when making an object file
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 343 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 344 : Symbol not previously defined (STAT)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 344 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 345 : Symbol not previously defined (STAT)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 345 : Executable code and data must be defined in an appropriate section
+Error[150]   M:\WEGA\WEGA_OLD\CALC.ASM 346 : Labels must be defined in a code or data section when making an object file
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 346 : Executable code and data must be defined in an appropriate section
+Error[151]   M:\WEGA\WEGA_OLD\CALC.ASM 347 : Operand contains unresolvable labels or is too complex
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 347 : Executable code and data must be defined in an appropriate section
+Warning[207] M:\WEGA\WEGA_OLD\CALC.ASM 348 : Found label after column 1. (movab)
+Error[122]   M:\WEGA\WEGA_OLD\CALC.ASM 348 : Illegal opcode (D_TPS)
+Warning[207] M:\WEGA\WEGA_OLD\CALC.ASM 349 : Found label after column 1. (movab)
+Error[122]   M:\WEGA\WEGA_OLD\CALC.ASM 349 : Illegal opcode (T_INJ_L)
+Warning[207] M:\WEGA\WEGA_OLD\CALC.ASM 350 : Found label after column 1. (movab)
+Error[122]   M:\WEGA\WEGA_OLD\CALC.ASM 350 : Illegal opcode (T_INJ_H)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 351 : Symbol not previously defined (MUL16_8)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 351 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 352 : Symbol not previously defined (Mul1Lo)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 352 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 353 : Symbol not previously defined (Mul1Hi)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 353 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 354 : Symbol not previously defined (T_INJ_L)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 354 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 355 : Symbol not previously defined (ResHi)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 355 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 356 : Symbol not previously defined (T_INJ_H)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 356 : Executable code and data must be defined in an appropriate section
+Error[150]   M:\WEGA\WEGA_OLD\CALC.ASM 359 : Labels must be defined in a code or data section when making an object file
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 359 : Symbol not previously defined (STAT)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 359 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 360 : Symbol not previously defined (ADCON0)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 360 : Symbol not previously defined (GO)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 360 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 361 : Symbol not previously defined (LAG)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 361 : Executable code and data must be defined in an appropriate section
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 362 : Executable code and data must be defined in an appropriate section
+Error[122]   M:\WEGA\WEGA_OLD\CALC.ASM 364 : Illegal opcode (let)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 365 : Symbol not previously defined (DEL)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 365 : Executable code and data must be defined in an appropriate section
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 366 : Symbol not previously defined (ADCON0)
+Error[113]   M:\WEGA\WEGA_OLD\CALC.ASM 366 : Symbol not previously defined (GO)
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 366 : Executable code and data must be defined in an appropriate section
+Error[152]   M:\WEGA\WEGA_OLD\CALC.ASM 367 : Executable code and data must be defined in an appropriate section
+Error[129]   M:\WEGA\WEGA_OLD\CALC.ASM 368 : Expected (END)
